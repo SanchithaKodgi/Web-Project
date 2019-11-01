@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>fibonacci clock</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.unity.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="clock_style.css">
+    <script type="text/javascript">
+    window.onload = setInterval(clock,1000);
+function clock()
+    {
+	  var d = new Date();
+	  
+	  var date = d.getDate();
+	  
+	  var month = d.getMonth();
+	  var montharr =["Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+	  month=montharr[month];
+	  
+	  var year = d.getFullYear();
+	  
+	  var day = d.getDay();
+	  var dayarr =["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
+	  day=dayarr[day];
+	  
+	  var hour =d.getHours();
+          var min = d.getMinutes();
+	  var sec = d.getSeconds();
+	
+	  document.getElementById("date").innerHTML=day+" "+date+" "+month+" "+year;
+	  document.getElementById("time").innerHTML=hour+":"+min+":"+sec;
+    }
+  </script>
+  </head>
+  <body>
+    <h1>Digital Clock</h1>
+    <h2>Date and Time</h2>
+   <p id="date"></p>
+   <p id="time"></p>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand big-font" href="#">FIBONACCI CLOCK</a>
+        </div>
+      </div>
+    </nav>
+    <h1 class="text-primary" style="text-align:center; text-decoration:underline;">Fibonacci Clock</h1>
+    <br>
+    <table align="center">
+      <tr>
+        <td id="two" class="ratio2 info-font" rowspan="2">2</td>
+        <td id="one1" class="ratio1 info-font">1</td>
+        <td id="five" class="ratio5 info-font" rowspan="3">5</td>
+      </tr>
+      <tr>
+        <td id="one2" class="ratio1 info-font">1</td>
+      </tr>
+      <tr>
+        <td id="three" class="ratio3 info-font" colspan="2">3</td>
+      </tr>
+    </table>
+    <div style="text-align:center">
+      <br>
+      
+      <br>
+      <br>
+        <button id="info-button" class="btn btn-primary">Click here to know about fibonacci clock</button>
+    </div>
+   <div id="clockdate">
+  <div class="clockdate-wrapper">
+    <div id="clock"></div>
+    <div id="date"></div>
+  </div>
+</div>
+
+       <script src="jquery.js"></script>
+       <script src="index.js"></script>
+
+
+
+
+
+<button class="button" ><a href="game987.html">PLAY A GAME</a></button>
+
+    
+  </body>
+</html>
